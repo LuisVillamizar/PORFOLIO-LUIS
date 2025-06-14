@@ -1,0 +1,22 @@
+---
+interface Props {
+  Icon: any; // El componente del icono (Tailwind, Bootstrap, etc.)
+  tab: any; // El nombre de la tecnología
+}
+const { tab, Icon } = Astro.props;
+---
+
+<button
+  class="techTab w-full justify-center flex flex-row gap-2 rounded-2xl py-1 hover:bg-dark"
+  data-type={tab.type}
+>
+  <!-- <img
+    height="0"
+    width="0"
+    class="filter invert"
+    src={"/icons/" + tab.icon + ".svg"}
+    alt={tab.icon + " icon"}
+  /> -->
+  <Icon classes="text-white"/>
+  <span class="hidden md:block text-light-900">{tab.name}</span>
+</button>

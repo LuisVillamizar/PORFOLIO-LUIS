@@ -1,0 +1,26 @@
+---
+import Linkedin from "../icons/Linkedin.astro";
+import Github from "../icons/Github.astro";
+---
+
+<div class="h-full flex flex-col justify-center">
+  <button
+    id="socialLinks"
+    class="flex flex-col gap-4 text-white lg:bg-dark-900 hover:bg-accent-500 rounded-tr-2xl rounded-br-2xl p-4 transition-all ease-in-out duration-500"
+  >
+    <a
+      class="flex flex-row gap-2 lg:text-dark lg:hover:text-accent-900 items-end"
+      href="https://www.linkedin.com/in/christopherglood/"
+      target="_blank"
+    >
+      <Linkedin classes="h-8" />
+    </a>
+    <a
+      class="flex flex-row gap-2 lg:text-dark lg:hover:text-accent-900 items-end"
+      href="https://github.com/chrisestabaocupado"
+      target="_blank"
+    >
+      <Github classes="h-8" />
+    </a>
+  </button>
+</div>

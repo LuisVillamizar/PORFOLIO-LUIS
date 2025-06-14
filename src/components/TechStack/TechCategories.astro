@@ -1,0 +1,129 @@
+---
+// importing tabs icons
+import World from "../../icons/TechTabs/World.astro";
+import Server from "../../icons/TechTabs/Server.astro";
+import Database from "../../icons/TechTabs/Database.astro";
+import Tool from "../../icons/TechTabs/Tool.astro";
+// importing frontend icons
+import Tailwind from "../../icons/Tech/Tailwind.astro";
+import Bootstrap from "../../icons/Tech/Bootstrap.astro";
+import CSS from "../../icons/Tech/Css.astro";
+// importing database icons
+import Postgresql from "../../icons/Tech/Postgresql.astro";
+import MongoDB from "../../icons/Tech/MongoDB.astro";
+import Firebase from "../../icons/Tech/Firebase.astro";
+// importing backend icons
+import Nest from "../../icons/Tech/Nest.astro";
+import Express from "../../icons/Tech/Express.astro";
+import Swagger from "../../icons/Tech/Swagger.astro";
+// importing tools icons
+import Proxmox from "../../icons/Tech/Proxmox.astro";
+// importing icons
+import TechIcon from "./TechIcon.astro"; // Importamos el nuevo componente
+import TechTab from "./TechTab.astro"; // Importamos el nuevo componente
+// building tabs
+const tabs = [
+  {
+    name: "Frontend",
+    icon: World,
+    type: "frontend",
+  },
+  {
+    name: "Backend",
+    icon: Server,
+    type: "backend",
+  },
+  {
+    name: "Bases de Datos",
+    icon: Database,
+    type: "database",
+  },
+  {
+    name: "Herramientas",
+    icon: Tool,
+    type: "tools",
+  },
+];
+---
+
+<div
+  id="techCategories"
+  class="w-full flex flex-row gap-2 bg-primary-500 p-2 rounded-2xl"
+>
+  {tabs.map((tab) => <TechTab tab={tab} Icon={tab.icon} />)}
+</div>
+
+<div id="techContent">
+  <div class="hidden w-full" data-type="frontend">
+    <span class="grid grid-cols-4">
+      <TechIcon Icon={Tailwind} name="Tailwind" />
+      <TechIcon Icon={Bootstrap} name="Bootstrap" />
+      <TechIcon Icon={CSS} name="CSS" />
+    </span>
+  </div>
+  <div class="hidden w-full" data-type="database">
+    <span class="grid grid-cols-4">
+      <TechIcon Icon={Postgresql} name="Postgresql" />
+      <TechIcon Icon={MongoDB} name="MongoDB" />
+      <TechIcon Icon={Firebase} name="Firebase" />
+    </span>
+  </div>
+  <div class="hidden w-full" data-type="backend">
+    <span class="grid grid-cols-4">
+      <TechIcon Icon={Nest} name="NestJS" />
+      <TechIcon Icon={Express} name="Express" />
+      <TechIcon Icon={Swagger} name="Swagger" />
+    </span>
+  </div>
+  <div class="hidden w-full" data-type="tools">
+    <span class="grid grid-cols-4">
+      <TechIcon Icon={Proxmox} name="Proxmox" />
+    </span>
+  </div>
+</div>
+
+<script>
+  import { animate, stagger } from "motion";
+  // selectores
+  const techCategories = document.getElementById("techCategories");
+  const buttons = techCategories?.querySelectorAll("button");
+  const techContent = document.getElementById("techContent");
+  const content = techContent?.getElementsByTagName("div");
+  // clickeando el primer boton
+  document.addEventListener("DOMContentLoaded", () => {
+    const firstButton = techCategories?.querySelector("button");
+    firstButton!.click();
+  });
+  buttons?.forEach((button) => {
+    button.addEventListener("click", () => {
+      const type = button.getAttribute("data-type");
+      if (!type) return;
+      // ocultar todo
+      for (let div of content!) {
+        div.classList.add("hidden");
+      }
+      // reset de botones
+      buttons.forEach((btn) => {
+        btn.classList.remove("bg-dark");
+        btn.disabled = false;
+      });
+      // mostrar el contenedor que corresponde y resaltando boton
+      const selectedContent = techContent!.querySelector(
+        `div[data-type="${type}"]`
+      );
+      if (selectedContent) {
+        selectedContent.classList.remove("hidden");
+        animate(
+          selectedContent.querySelectorAll(".tech"),
+          {
+            opacity: [0, 1],
+            transform: ["translateY(-10px)", "translateY(0px)"],
+          },
+          { duration: 0.6, delay: stagger(0.3) }
+        );
+      }
+      button.classList.add("bg-dark");
+      button.disabled = true;
+    });
+  });
+</script>

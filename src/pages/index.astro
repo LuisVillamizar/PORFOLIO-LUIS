@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import About from "../components/About.astro";
+import DetailedAbout from "../components/DetailedAbout.astro";
+import Timeline from "../components/Timeline.astro";
+import SimpleCard from "../components/SimpleCard.astro";
+import TechCategories from "../components/TechStack/TechCategories.astro";
+import SideAccess from "../components/SideAccess.astro";
+// Mocks and requests
+import { expMock } from "../data/Exp";
+import { Projects } from "../data/Projects";
+---
+
+<Layout title="Personal Portfolio">
+  <nav class="w-full bg-primary-500 text-gray-50 z-50">
+    <Navbar />
+  </nav>
+
+  <main
+    class="flex flex-col gap-10 py-10 px-6 md:px-12 lg:px-20 lg:max-w-4xl lg:mx-auto"
+  >
+    <!-- Sección Sobre Mí -->
+    <div id="aboutMe">
+      <About />
+    </div>
+
+    <!-- Sección Experiencia Laboral -->
+    <section class="flex flex-col gap-6">
+      <h1 class="text-white font-bold text-3xl">Experiencia Laboral</h1>
+      <ol class="relative border-s-4 border-gray-200">
+           {
+        expMock.map((exp) => (
+          <Timeline
+            key={exp.id}
+            date={exp.date}
+            title={exp.title}
+            description={exp.description}
+            url={exp.url}
+            details={exp.details}
+          />
+        ))
+      }
+      </ol>
+    </section>
+
+    <section id="TechStack" class="flex flex-col gap-6">
+      <h1 class="text-white text-left font-bold text-3xl">Habilidades</h1>
+      <TechCategories />
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="Projects" class="flex flex-col gap-6">
+      <h1 class="text-white font-bold text-3xl">Proyectos</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          Projects.map((project) => (
+            <SimpleCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              img_url={project.img_url}
+              project_url={project.project_url}
+              tags={project.tags}
+            />
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="flex flex-col gap-6">
+      <h1 class="text-white text-left font-bold text-3xl">Sobre mí</h1>
+      <DetailedAbout />
+    </section>
+  </main>
+  <section
+    class="flex-row py-10 px-6 hidden lg:block lg:p-0 lg:fixed lg:h-screen lg:items-center lg:left-0 lg:top-0"
+  >
+    <SideAccess />
+  </section>
+  <Footer />
+</Layout>

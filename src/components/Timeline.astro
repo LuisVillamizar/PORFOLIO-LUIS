@@ -1,0 +1,32 @@
+---
+const { title, date, description, url, details } = Astro.props;
+---
+
+<section class="flex flex-row flex-wrap gap-4">
+  
+    <li class="mb-10 ms-4">
+      <div class="absolute w-4 h-4 rounded-full mt-1.5 -start-2.5 bg-tertiary">
+      </div>
+      <h2 class="font-bold text-xl text-teal-700">
+        {details}
+      </h2>
+      <h3 class="text-sm font-semibold text-teal-600">
+        {title}
+      </h3>
+      <!-- Corregido el cierre de la etiqueta -->
+      <time class="mb-1 text-sm font-semibold leading-none text-teal-500">
+        {date}
+      </time>
+      <p class="mb-6 text-justify text-base font-normal text-light-900">
+        {description}
+      </p>
+      <a
+        href={url}
+        target="_blank"
+        class=" font-semibold bg-primary text-gray-300 rounded-xl p-3 hover:bg-teal-600 hover:text-teal-950 transition-all ease-in-out duration-200"
+      >
+        Más información
+      </a>
+    </li>
+
+</section>

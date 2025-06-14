@@ -1,0 +1,40 @@
+---
+import Badge from "./Badge.astro"
+import DownloadIcon from "../icons/Download.astro";
+import SendIcon from "../icons/Send.astro";
+const cvURL =
+  "https://drive.google.com/file/d/1XnhTt9swdP_MSCtKQg6oDbijxGJLvPwH/view?usp=drive_link";
+---
+
+<div class="flex flex-col md:flex-row items-center gap-5 md:gap-16">
+  <img
+    id="mainImage"
+    class="object-fill rounded-full max-h-40 md:max-h-40 w-auto"
+    src="/lvf1.webp"
+    alt="Luis Villamizar"
+  />
+  <div class="flex flex-col w-full max-w-lg gap-3 text-center md:text-left">
+    <h1 class="text-4xl font-bold text-primary-900">¡Hola!, soy Luis Villamizar</h1>
+    <Badge>Disponible para trabajar</Badge>
+    <p class="text-primary-900 text-wrap [&>strong]:text-teal-600">
+      <strong>+3 Años </strong>como Desarrollador fullstack, especializado en el Frontend, desarrollo de <strong>aplicaciones web,</strong> siempre tratando de dejar mi toque personal y ofreciendo los mejores resultados. 
+    </p>
+    <div class="flex flex-row gap-3 mt-3 w-full">
+      <a
+        href={cvURL}
+        target="_blank"
+        class="flex flex-row justify-center items-center gap-2 w-full bg-primary text-gray-300 rounded-xl p-3 hover:bg-teal-600 hover:text-teal-950 transition-all ease-in-out duration-200"
+      >
+        <DownloadIcon classes="h-6" />
+        <span class="font-semibold">Mi Hoja de Vida</span>
+      </a>
+      <a
+        href="mailto:luis81691@gmail.com"
+        class="flex flex-row justify-center items-center gap-2 w-full bg-primary text-gray-300 rounded-xl p-3 hover:bg-teal-600 hover:text-teal-950 transition-all ease-in-out duration-200"
+      >
+        <SendIcon classes="h-6" />
+        <span class="font-semibold">¡HABLEMOS!</span>
+      </a>
+    </div>
+  </div>
+</div>

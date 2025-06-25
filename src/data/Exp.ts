@@ -1,20 +1,20 @@
 export const expMock = [
   {
-    id: "fasmee",
+    id: "SISCO",
     url: "https://siscomputo.com/wps/index.html",
-    date: "Septiembre 2021 - 2025",
+    date: "Mayo 2022 - 2025",
     title: "SISCOMPUTO",
-    details: "Analista de Sistemas",
+    details: "Desarrollador de Software",
     description:
-      "Profesional con más de dos años de experiencia en desarrollo de software, especializado en IBM Domino / HCL Domino, con enfoque en front-end y conocimientos en back-end. para optimización de interfaces y funcionalidades interactivas. He trabajado en el desarrollo y parametrización de módulos para sistemas de gestión documental, adaptándolos a las necesidades de diferentes áreas empresariales.",
+      "Desarrollo de Software con manejo en Domino, Java, JavaScript, JQuery, HTML, CSS. Soporte Tecnico, atendiendo requerimientos de usuario. Manejo de Ambientes de Producción y desarrollo. Atencion al usaurio y pasos a productivo.",
   },
    {
-    id: "fasmee",
-    url: "https://siscomputo.com/wps/index.html",
-    date: "Septiembre 2021 - 2025",
-    title: "TP",
-    details: "Analista de Sistemas",
+    id: "TP",
+    url: "https://www.tp.com/en-us/",
+    date: "Abril 2021 - Mayo 2022",
+    title: "TELEPERFORMANCE",
+    details: "Analista de TI",
     description:
-      "Profesional con más de dos años de experiencia en desarrollo de software, especializado en IBM Domino.",
+      "Brindar soporte técnico nivel uno por medio de chat. Conociminetos en directorios Activos, Escritorios Remoto e Instalacion de Software.",
   },
 ];

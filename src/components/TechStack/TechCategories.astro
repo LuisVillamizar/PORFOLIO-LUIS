@@ -8,19 +8,23 @@ import Tool from "../../icons/TechTabs/Tool.astro";
 import Tailwind from "../../icons/Tech/Tailwind.astro";
 import Bootstrap from "../../icons/Tech/Bootstrap.astro";
 import CSS from "../../icons/Tech/Css.astro";
+import Angular from "../../icons/Tech/Angular.astro";
+import React from "../../icons/Tech/React.astro";
+import JS from "../../icons/Tech/JS.astro";
 // importing database icons
 import Postgresql from "../../icons/Tech/Postgresql.astro";
+import MySQL from "../../icons/Tech/MySQL.astro"; 
 import MongoDB from "../../icons/Tech/MongoDB.astro";
 import Firebase from "../../icons/Tech/Firebase.astro";
 // importing backend icons
-import Nest from "../../icons/Tech/Nest.astro";
-import Express from "../../icons/Tech/Express.astro";
+import Java from "../../icons/Tech/Java.astro";
 import Swagger from "../../icons/Tech/Swagger.astro";
 // importing tools icons
 import Proxmox from "../../icons/Tech/Proxmox.astro";
 // importing icons
 import TechIcon from "./TechIcon.astro"; // Importamos el nuevo componente
 import TechTab from "./TechTab.astro"; // Importamos el nuevo componente
+
 // building tabs
 const tabs = [
   {
@@ -55,23 +59,23 @@ const tabs = [
 
 <div id="techContent">
   <div class="hidden w-full" data-type="frontend">
-    <span class="grid grid-cols-4">
-      <TechIcon Icon={Tailwind} name="Tailwind" />
-      <TechIcon Icon={Bootstrap} name="Bootstrap" />
-      <TechIcon Icon={CSS} name="CSS" />
+    <span class="grid grid-cols-6">
+       <TechIcon Icon={Angular} name="Angular" />
+       <TechIcon Icon={Bootstrap} name="Bootstrap" />
+       <TechIcon Icon={CSS} name="CSS" />
+       <TechIcon Icon={JS} name="JavaScript" />
+       <TechIcon Icon={React} name="React" />
+       <TechIcon Icon={Tailwind} name="Tailwind" />
     </span>
   </div>
   <div class="hidden w-full" data-type="database">
-    <span class="grid grid-cols-4">
-      <TechIcon Icon={Postgresql} name="Postgresql" />
-      <TechIcon Icon={MongoDB} name="MongoDB" />
-      <TechIcon Icon={Firebase} name="Firebase" />
+    <span class="grid grid-cols-1">
+      <TechIcon Icon={MySQL} name="MySQL" />
     </span>
   </div>
   <div class="hidden w-full" data-type="backend">
     <span class="grid grid-cols-4">
-      <TechIcon Icon={Nest} name="NestJS" />
-      <TechIcon Icon={Express} name="Express" />
+      <TechIcon Icon={Java} name="Java" />
       <TechIcon Icon={Swagger} name="Swagger" />
     </span>
   </div>

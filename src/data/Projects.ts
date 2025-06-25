@@ -9,21 +9,21 @@ interface Project {
 
 export const Projects: Project[] = [
   {
-    id: "fasmee-web",
-    title: "FASMEE",
-    tags: ["Javascript", "PUG", "ExpressJS", "Bootstrap"],
+    id: "Portafolio",
+    title: "PORTAFOLIO",
+    tags: ["Tailwind", "JavaScript", "Astro"],
     description:
-      "Sitio web institucional del FASMEE con información sobre servicios y actividades, diseñado para ser accesible y fácil de navegar.",
-    project_url: "https://fasmee.gob.ve/",
+      "Desarrolle este Porfolio para aplicar mis conocimientos en Astro, implemente algunas librerias de JS para que la pagina fuera mas interacitva, realmente el proyecto es una hoja de vida la cual muestra informacion sobre mi trayectoria.",
+    project_url: "NA",
     img_url: "/projects/fasmee.webp",
   },
   {
-    id: "python",
-    title: "Fundamentos de Python",
-    tags: ["Python"],
+    id: "Calendar",
+    title: "CALENDARIO RES",
+    tags: ["Tailwind", "Spring Boot", "Angular "],
     description:
-      "Repositorio con fundamentos de Python, ideal para aprender y reforzar conceptos básicos y avanzados.",
+      "Proyecto desarrollado en compañia el cual tiene como fin impremetarse en un ambiente empresarial donde se pueden agendar multiples reuniones, el fin del aplicativo es validar los espacios libres de las personas para que no se puedan agendar reuniones en espacios ya ocupados.",
+    project_url: "NA",
     img_url: "/projects/python.webp",
-    project_url: "https://github.com/chrisestabaocupado/python",
   },
 ];

@@ -5,6 +5,7 @@ const card_id = `project-card-${key}`;
 
 <a
   href={project_url}
+  target="_blank"
   id={card_id}
   class="border-4 border-primary-500 transition-all duration-300 ease-in-out shadow-lg hover:bg-primary-500 rounded-2xl flex flex-col gap-4 p-8 md:p-8 project_card"
 >
@@ -22,7 +23,7 @@ const card_id = `project-card-${key}`;
     <div class="flex flex-wrap gap-2 my-2">
       {
         tags.map((tag: string) => (
-          <span class="text-xs md:text-sm font-bold text-dark  bg-accent px-2 py-1 rounded-lg">
+          <span class="text-xs md:text-sm font-bold text-slate-350  bg-teal-700 px-2 py-1 rounded-lg">
             {tag}
           </span>
         ))

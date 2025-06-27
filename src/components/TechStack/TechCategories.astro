@@ -12,18 +12,19 @@ import Angular from "../../icons/Tech/Angular.astro";
 import React from "../../icons/Tech/React.astro";
 import JS from "../../icons/Tech/JS.astro";
 // importing database icons
-import Postgresql from "../../icons/Tech/Postgresql.astro";
+
 import MySQL from "../../icons/Tech/MySQL.astro"; 
-import MongoDB from "../../icons/Tech/MongoDB.astro";
-import Firebase from "../../icons/Tech/Firebase.astro";
+import HCL from "../../icons/Tech/HCL.astro";
 // importing backend icons
 import Java from "../../icons/Tech/Java.astro";
-import Swagger from "../../icons/Tech/Swagger.astro";
+import Spring from "../../icons/Tech/Spring.astro";
 // importing tools icons
-import Proxmox from "../../icons/Tech/Proxmox.astro";
+import Visual from "../../icons/Tech/Visual.astro";
+import Swagger from "../../icons/Tech/Swagger.astro";
 // importing icons
 import TechIcon from "./TechIcon.astro"; // Importamos el nuevo componente
 import TechTab from "./TechTab.astro"; // Importamos el nuevo componente
+
 
 // building tabs
 const tabs = [
@@ -58,8 +59,8 @@ const tabs = [
 </div>
 
 <div id="techContent">
-  <div class="hidden w-full" data-type="frontend">
-    <span class="grid grid-cols-6">
+  <div class="hidden w-full " data-type="frontend">
+    <span class="grid grid-cols-4 gap-y-6">
        <TechIcon Icon={Angular} name="Angular" />
        <TechIcon Icon={Bootstrap} name="Bootstrap" />
        <TechIcon Icon={CSS} name="CSS" />
@@ -69,19 +70,22 @@ const tabs = [
     </span>
   </div>
   <div class="hidden w-full" data-type="database">
-    <span class="grid grid-cols-1">
+    <span class="grid grid-cols-4 gap-y-6">
       <TechIcon Icon={MySQL} name="MySQL" />
     </span>
   </div>
   <div class="hidden w-full" data-type="backend">
-    <span class="grid grid-cols-4">
+    <span class="grid grid-cols-4 gap-y-6">
       <TechIcon Icon={Java} name="Java" />
-      <TechIcon Icon={Swagger} name="Swagger" />
+      <TechIcon Icon={Spring} name="Spring" />
+       <TechIcon Icon={HCL} name="Lotus Script" />
     </span>
   </div>
   <div class="hidden w-full" data-type="tools">
-    <span class="grid grid-cols-4">
-      <TechIcon Icon={Proxmox} name="Proxmox" />
+    <span class="grid grid-cols-4 gap-y-6">
+      <TechIcon Icon={Visual} name="Visual Studio" />
+      <TechIcon Icon={Swagger} name="Swagger" />
+      <TechIcon Icon={HCL} name="HCL Desinger" />
     </span>
   </div>
 </div>
